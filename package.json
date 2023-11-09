@@ -1,0 +1,18 @@
+{
+  "name": "rtmam_build_tools",
+  "version": "1.0.0",
+  "description": "Let's play with tooling",
+  "main": "index.js",
+  "scripts": {
+    "styles:dev": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --embed-source-map --source-map-urls=\"absolute\" --watch",
+    "styles:prod": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --no-source-map --style=compressed",
+    "build": "npm run styles:prod",
+    "dev": "npm run styles:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

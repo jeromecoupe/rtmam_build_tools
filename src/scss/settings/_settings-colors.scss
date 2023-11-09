@@ -1,0 +1,14 @@
+/* ===================================
+=colors
+=================================== */
+
+:root {
+  /* basic variables (not used in CSS) */
+  --color-white: #ffffff;
+
+  --color-gray-100: hsl(0, 4%, 10%);
+
+  /* incident variables (used in CSS) */
+  --color-background: var(--color-white);
+  --color-text: var(--color-gray-100);
+}
