@@ -1,3 +1,47 @@
+/* ===================================
+=variables
+=================================== */
+
+/* colors */
+:root {
+  /* basic variables (not used in CSS) */
+  --color-white: #ffffff;
+
+  --color-gray-100: hsl(0, 4%, 10%);
+
+  /* incident variables (used in CSS) */
+  --color-background: var(--color-white);
+  --color-text: var(--color-gray-100);
+}
+
+/* typography */
+:root {
+  --fontstack-main: system-ui, "Roboto", sans-serif;
+}
+
+/* ===================================
+=nuke margin block start
+=================================== */
+
+*,
+*::before,
+*::after {
+  margin-block-start: 0;
+}
+
+/* ===================================
+=html
+=================================== */
+
+html {
+  font: 400 100%/1.5 var(--fontstack-main);
+}
+
+/* ===================================
+=body
+=================================== */
+
 body {
-  background-color: yellow;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
