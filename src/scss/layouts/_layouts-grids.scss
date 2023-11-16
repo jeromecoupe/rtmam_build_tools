@@ -1,0 +1,79 @@
+// ===================================
+// =grids
+// ===================================
+
+.l-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: calc(24 / 16 * 1rem);
+}
+
+.l-grid--2cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.l-grid--3cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.l-grid--4cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.l-grid--5cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media all and (min-width: 750px) {
+  .l-grid--2cols\@medium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--3cols\@medium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--4cols\@medium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--5cols\@medium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .l-grid--2cols\@large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--3cols\@large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--4cols\@large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--5cols\@large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .l-grid--2cols\@xlarge {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--3cols\@xlarge {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--4cols\@xlarge {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .l-grid--5cols\@xlarge {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
