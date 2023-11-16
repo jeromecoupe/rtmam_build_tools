@@ -17,13 +17,13 @@ Let's play with
 ## TODOS
 
 - [x] add `sass` and show imports
-- [ ] present `build` and `dev` commands, `pre` and `post` prefixes
-- [ ] add `rimraf` to delete `./dist`
+- [x] present `build` and `dev` commands, `pre` and `post` prefixes
+- [x] add `rimraf` to delete `./dist`
+- [x] add `browsersync` to have a local server and tests
+- [x] add `npm-run-all` to run scripts in sequence and in parallel
 - [ ] present sass with syllabus
-- [ ] add `browsersync` to have a local server and tests
 - [ ] add `esbuild` to build javascript pipeline
 - [ ] present working with Javascipt modules, immediately invoked functions and loading from `node_modules`.
-- [ ] add `npm-run-all` to run scripts in sequence and in parallel
 - [ ] add `postcss` to build a full css pipeline 
 - [ ] add `onchange` to replace watch options
 - [ ] explain how to load homemade scripts
