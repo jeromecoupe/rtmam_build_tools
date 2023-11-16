@@ -14,12 +14,12 @@ Let's play with
 - run `npm run build` to build the project (production build)
 - run `npm run dev` to run a development environment (watch)
 
-## TODO
+## TODOS
 
 - [x] add `sass` and show imports
 - [ ] present `build` and `dev` commands, `pre` and `post` prefixes
 - [ ] add `rimraf` to delete `./dist`
-- [ ] present sass and how to use it with syllabus (breakpoints, variables, !default, @mixin, @content, etc.)
+- [ ] present sass with syllabus
 - [ ] add `browsersync` to have a local server and tests
 - [ ] add `esbuild` to build javascript pipeline
 - [ ] present working with Javascipt modules, immediately invoked functions and loading from `node_modules`.
