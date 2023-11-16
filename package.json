@@ -4,15 +4,17 @@
   "description": "Let's play with tooling",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf \"./dist\"",
     "styles:dev": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --embed-source-map --source-map-urls=\"absolute\" --watch",
     "styles:prod": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --no-source-map --style=compressed",
-    "build": "npm run styles:prod",
+    "build": "npm run clean && npm run styles:prod",
     "dev": "npm run styles:dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "rimraf": "^5.0.5",
     "sass": "^1.69.5"
   }
 }
