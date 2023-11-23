@@ -1,6 +1,11 @@
 @import "settings/settings-colors.scss";
 @import "settings/settings-typography.scss";
+@import "settings/settings-mediaqueries.scss";
+
+@import "mixins/_mixins-mediaqueries.scss";
 
 @import "base/_base-body.scss";
 @import "base/_base-html.scss";
 @import "base/_base-margins.scss";
+
+@import "layouts/_layouts-grids.scss";

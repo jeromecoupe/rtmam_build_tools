@@ -21,7 +21,8 @@ Let's play with
 - [x] add `rimraf` to delete `./dist`
 - [x] add `browsersync` to have a local server and tests
 - [x] add `npm-run-all` to run scripts in sequence and in parallel
-- [ ] present sass with syllabus
+- [x] present sass with syllabus
+- [ ] summarize sass
 - [ ] add `esbuild` to build javascript pipeline
 - [ ] present working with Javascipt modules, immediately invoked functions and loading from `node_modules`.
 - [ ] add `postcss` to build a full css pipeline 
