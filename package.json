@@ -5,20 +5,32 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf \"./dist\"",
-    "server": "browser-sync start --no-open --server \"./\" --files \"dist/css/**/*\" \"dist/js/**/*\" \"./**/*.html\"",
+    "server": "browser-sync start --no-open --server \"./\" --files \"dist/css/**/*.css\" \"dist/js/**/*.js\" \"./**/*.html\"",
     "styles:dev": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --embed-source-map --source-map-urls=\"absolute\"",
-    "styles:prod": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --no-source-map --style=compressed",
+    "styles:prod": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --no-source-map",
+    "poststyles:prod": "postcss \"./dist/css/main.css\" --no-map --use autoprefixer cssnano --replace",
+    "scripts:dev": "esbuild \"./src/js/app.js\" --sourcemap=inline --bundle --outfile=\"./dist/js/app.bundle.js\"",
+    "scripts:prod": "esbuild \"./src/js/app.js\" --bundle --minify --target=es6 --outfile=\"./dist/js/app.bundle.js\"",
     "watch:styles": "onchange \"./src/scss/**/*\" -- npm run styles:dev",
-    "build": "npm-run-all clean -p styles:prod",
+    "watch:scripts": "onchange \"./src/js/**/*\" -- npm run scripts:dev",
+    "build": "npm-run-all clean --parallel styles:prod scripts:prod",
     "dev": "npm-run-all --parallel server watch:*"
   },
+  "browserslist": [
+    "defaults and fully supports es6-module"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
+    "cssnano": "^6.0.1",
+    "esbuild": "^0.19.7",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5"
   }
