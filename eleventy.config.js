@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
   // watch compiled CSS and JS
   eleventyConfig.setServerOptions({
     watch: ["./dist/assets/css/**/*.css", "./dist/assets/js/**/*.js"],
+    port: 3000,
   });
 
   // Override default config
