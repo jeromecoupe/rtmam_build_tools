@@ -5,24 +5,26 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf \"./dist\"",
-    "server": "browser-sync start --no-open --server \"./\" --files \"dist/css/**/*.css\" \"dist/js/**/*.js\" \"./**/*.html\"",
-    "styles:dev": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --embed-source-map --source-map-urls=\"absolute\"",
-    "styles:prod": "sass \"./src/scss/main.scss\" \"./dist/css/main.css\" --no-source-map",
-    "poststyles:prod": "postcss \"./dist/css/main.css\" --no-map --use autoprefixer cssnano --replace",
-    "scripts:dev": "esbuild \"./src/js/app.js\" --sourcemap=inline --bundle --outfile=\"./dist/js/app.bundle.js\"",
-    "scripts:prod": "esbuild \"./src/js/app.js\" --bundle --minify --target=es6 --outfile=\"./dist/js/app.bundle.js\"",
-    "watch:styles": "onchange \"./src/scss/**/*\" -- npm run styles:dev",
-    "watch:scripts": "onchange \"./src/js/**/*\" -- npm run scripts:dev",
-    "build": "npm-run-all clean --parallel styles:prod scripts:prod",
+    "server": "npx @11ty/eleventy --serve --quiet",
+    "eleventy": "npx @11ty/eleventy --quiet",
+    "styles:dev": "sass \"./src/assets/scss/main.scss\" \"./dist/assets/css/main.css\" --embed-source-map --source-map-urls=\"absolute\"",
+    "styles:prod": "sass \"./src/assets/scss/main.scss\" \"./dist/assets/css/main.css\" --no-source-map",
+    "poststyles:prod": "postcss \"./dist/assets/css/main.css\" --no-map --use autoprefixer cssnano --replace",
+    "scripts:dev": "esbuild \"./src/assets/js/app.js\" --sourcemap=inline --bundle --outfile=\"./dist/assets/js/app.bundle.js\"",
+    "scripts:prod": "esbuild \"./src/assets/js/app.js\" --bundle --minify --target=es6 --outfile=\"./dist/assets/js/app.bundle.js\"",
+    "watch:styles": "onchange \"./src/assets/scss/**/*\" -- npm run styles:dev",
+    "watch:scripts": "onchange \"./src/assets/js/**/*\" -- npm run scripts:dev",
+    "build": "npm-run-all clean --parallel eleventy styles:prod scripts:prod",
     "dev": "npm-run-all --parallel server watch:*"
   },
   "browserslist": [
-    "defaults and fully supports es6-module"
+    "last 4 versions, not dead"
   ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
     "cssnano": "^6.0.1",

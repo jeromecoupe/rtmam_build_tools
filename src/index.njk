@@ -1,0 +1,20 @@
+---
+permalink: /index.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <h1>Build tools are awesome</h1>
+  <p>What's the meaning of the universe: {{ 40 + 2 }}</p>
+  <p>
+    Essentially, build tools allow you to create build pipelines to automate a
+    series of things:
+  </p>
+  <ul>
+    <li>Compile Sass into CSS, add vendor prefixes and compress CSS with PostCSS</li>
+    <li>Bundle, minify and transpile your JS with esbuild</li>
+    <li>Use Eleventy as a static site generator</li>
+  </ul>
+{% endblock %}
+ 
