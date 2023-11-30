@@ -1,0 +1,21 @@
+/* ===================================
+=fonts
+=================================== */
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi.woff2") format("woff2-variations"),
+    url("../fonts/satoshi.woff2") format("woff2") tech("variations");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/satoshi-italic.woff2") format("woff2-variations"),
+    url("../fonts/satoshi-italic.woff2") format("woff2") tech("variations");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
