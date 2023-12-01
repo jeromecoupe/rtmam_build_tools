@@ -1,0 +1,10 @@
+{% extends "layouts/base.njk" %}
+
+{% set currentSection = "blog" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  <p>{{ page.date }}</p>
+  <p>{{ summary }}</p>
+  {{ content | safe }}
+{% endblock %}

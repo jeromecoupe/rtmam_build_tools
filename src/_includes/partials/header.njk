@@ -1,0 +1,16 @@
+<nav>
+  {% for item in nav %}
+    {% if loop.first %}<ul>{% endif %}
+    {% set currentClass = "" %}
+    {% set currentAria = "" %}
+    {% if currentSection == item.navSection %}
+      {% set currentClass = "is-active" %}
+      {% set currentAria = "aria-current='page'" %}
+    {% endif %}
+    <li>
+      <a class="{{ currentClass }}" {{ currentAria | safe }} href="{{ item.navUrl }}">{{ item.navLabel }}</a>
+    </li>
+    
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+</nav>

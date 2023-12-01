@@ -1,4 +1,12 @@
 module.exports = function (eleventyConfig) {
+  // blogposts collection
+  eleventyConfig.addCollection("blogposts", function (collection) {
+    let blogposts = collection.getFilteredByGlob(
+      "./src/content/blogposts/*.md"
+    );
+    return blogposts;
+  });
+
   // Eleventy server config
   // watch compiled CSS and JS
   eleventyConfig.setServerOptions({

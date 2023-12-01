@@ -1,0 +1,36 @@
+---
+permalink: /index.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% set currentSection = "home" %}
+
+{% block content %}
+
+  <h1>Build tools are awesome</h1>
+  {% for item in collections.blogposts  %}
+    {% if loop.first %}<ul>{% endif %}
+      <li>
+        
+        <article>
+          <h2>{{ item.data.title }}</h2>
+          <p>{{ item.data.summary }}</p>
+          <p><a href="{{ item.page.url }}">Read more</a></p>
+        </article>
+
+      </li>
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+
+  <h2>Ships, not Chips</h2>
+  {% for item in starships %}
+    {% if loop.first %}<ul>{% endif %}
+
+      <li>{{ item.name }}</li>
+    
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+
+{% endblock %}
+ 
