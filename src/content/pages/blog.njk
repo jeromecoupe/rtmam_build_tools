@@ -1,10 +1,44 @@
 ---
-permalink: /blog/index.html
+pagination: 
+  data: collections.blogposts
+  size: 2
+  alias: blogposts
+permalink: /blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
+
 {% extends "layouts/base.njk" %}
+
+{% from "macros/blogpostCard.njk" import blogpostCard %}
 
 {% set currentSection = "blog" %}
 
 {% block content %}
   <h1>Blog archive</h1>
+  {% for item in blogposts %}
+    {% if loop.first %}<ul>{% endif %}
+      <li>
+        {{ blogpostCard({
+          title: item.data.title,
+          date: item.page.date,
+          summary: item.data.summary,
+          image: item.data.blogImage,
+          alt: item.data.blogImageAlt,
+          url: item.page.url
+        }) }}
+      </li>
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+
+  {% if pagination.pages|length %}
+    <nav aria-label="pagination">
+      <ul>
+        {% if pagination.href.previous %}
+          <li><a href="{{ pagination.href.previous }}">&larr; Previous</a></li>
+        {% endif %}
+        {% if pagination.href.next %}
+          <li><a href="{{ pagination.href.next }}">Next &rarr;</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
 {% endblock %}

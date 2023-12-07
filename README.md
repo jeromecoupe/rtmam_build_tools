@@ -31,7 +31,9 @@ Let's play with
 - [x] eleventy collections (tags and globs / folders)
 - [x] nunjucks macros for components
 - [x] add images to blogposts
-- [ ] eleventy custom filters and access to NPM ecosystem (date)
-- [ ] eleventy pagination
+- [x] eleventy custom filters and access to NPM ecosystem (date)
+- [x] eleventy pagination
 - [ ] dynamic data files (starships) and promise all
+- [ ] custom shortcode
+- [ ] fetch plugin and caching
 - [ ] generate images / thumbnails via Sharp

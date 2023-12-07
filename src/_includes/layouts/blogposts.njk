@@ -3,8 +3,23 @@
 {% set currentSection = "blog" %}
 
 {% block content %}
+  <p>
+    {% set img1500 = "/assets/img/blogposts/1500x1125/" ~ blogImage %}
+    {% set img1024 = "/assets/img/blogposts/1024x768/" ~ blogImage %}
+    {% set img800 = "/assets/img/blogposts/800x600/" ~ blogImage %}
+    <img src="{{ img800 }}"
+         srcset="{{ img800 }} 800w,
+                 {{ img1024 }} 1024w,
+                 {{ img1500 }} 1500w"
+         sizes="100vw"
+         width="1500"
+         height="1125"
+         decoding="async"
+         class="o-fluidimg"
+         alt="{{ blogImageAlt }}">
+  </p>
   <h1>{{ title }}</h1>
-  <p>{{ page.date }}</p>
+  <p><time datetime="{{ page.date|dateISO }}">{{ page.date|dateFull }}</time></p>
   <p>{{ summary }}</p>
   {{ content | safe }}
 {% endblock %}

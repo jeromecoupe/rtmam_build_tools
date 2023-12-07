@@ -4,10 +4,12 @@
   <article>
     <img src="{{ imgSmall }}"
          class="o-fluidimg"
+         width="800"
+         height="600"
          alt="{{ params.alt }}"
          loading="lazy"
          decoding="async">
-    <h2>{{ params.title }}</h2>
+    <h2><a href="{{ params.url }}">{{ params.title }}</a></h2>
     <p><time datetime="{{ params.date|dateISO }}">{{ params.date|dateFull }}</time></p>
     <p>{{ params.summary }}</p>
     <p><a href="{{ params.url }}">Read more</a></p>
