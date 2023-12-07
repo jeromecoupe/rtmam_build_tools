@@ -8,6 +8,7 @@
          loading="lazy"
          decoding="async">
     <h2>{{ params.title }}</h2>
+    <p><time datetime="{{ params.date|dateISO }}">{{ params.date|dateFull }}</time></p>
     <p>{{ params.summary }}</p>
     <p><a href="{{ params.url }}">Read more</a></p>
   </article>

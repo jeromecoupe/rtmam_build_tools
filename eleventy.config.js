@@ -1,11 +1,16 @@
+// collections
+const blogposts = require("./src/_11ty/collections/blogposts.js");
+
+// filters
+const dates = require("./src/_11ty/filters/dates.js");
+
 module.exports = function (eleventyConfig) {
   // blogposts collection
-  eleventyConfig.addCollection("blogposts", function (collection) {
-    let blogposts = collection.getFilteredByGlob(
-      "./src/content/blogposts/*.md"
-    );
-    return blogposts;
-  });
+  eleventyConfig.addCollection("blogposts", blogposts);
+
+  // filters
+  eleventyConfig.addFilter("dateISO", dates.dateISO);
+  eleventyConfig.addFilter("dateFull", dates.dateFull);
 
   // Eleventy server config
   // watch compiled CSS and JS
