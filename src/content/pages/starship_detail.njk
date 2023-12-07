@@ -1,0 +1,12 @@
+---
+pagination:
+  data: starships
+  size: 1
+  alias: starship
+permalink: "/ships/{{ starship.name | slugify }}/index.html"
+---
+
+{% extends "layouts/base.njk" %}
+{% block content %}
+  <h1>{{ starship.name }}</h1>
+{% endblock %}

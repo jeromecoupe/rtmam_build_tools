@@ -33,7 +33,6 @@ Let's play with
 - [x] add images to blogposts
 - [x] eleventy custom filters and access to NPM ecosystem (date)
 - [x] eleventy pagination
-- [ ] dynamic data files (starships) and promise all
-- [ ] custom shortcode
-- [ ] fetch plugin and caching
-- [ ] generate images / thumbnails via Sharp
+- [x] dynamic data files (starships) and promise all
+- [x] fetch plugin and caching
+- [x] generate images / thumbnails via Sharp (https://github.com/jeromecoupe/webstoemp/blob/master/build_tasks/generate-images.js)

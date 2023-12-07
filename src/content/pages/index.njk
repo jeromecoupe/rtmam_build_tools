@@ -28,5 +28,15 @@ permalink: /index.html
     {% if loop.last %}</ul>{% endif %}
   {% endfor %}
 
+  <h2>Ships, not chips</h2>
+  {% for item in starships %}
+    {% if loop.first %}<ul>{% endif %}
+        <li>
+          {% set url = "/ships/" ~ item.name|slugify %}
+          <a href="{{ url }}">{{ item.name }}</a> - {{ item.class }}
+        </li>
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+
 {% endblock %}
  
