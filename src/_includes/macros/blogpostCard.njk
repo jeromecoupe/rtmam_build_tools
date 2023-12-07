@@ -1,0 +1,9 @@
+{% macro blogpostCard(params) %}
+
+  <article>
+    <h2>{{ params.title }}</h2>
+    <p>{{ params.summary }}</p>
+    <p><a href="{{ params.url }}">Read more</a></p>
+  </article>
+  
+{% endmacro %}

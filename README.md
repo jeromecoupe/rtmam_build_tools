@@ -27,6 +27,11 @@ Let's play with
 - [x] add `postcss` to build a full css pipeline
 - [x] add `onchange` to replace watch options
 - [ ] explain how to load homemade NPM scripts
-- [ ] present working with Javascipt modules, immediately invoked functions and loading from `node_modules`.
-- [ ] add `@11ty/eleventy`
-- [ ] present eleventy with syllabus
+- [x] add `@11ty/eleventy`
+- [x] eleventy collections (tags and globs / folders)
+- [ ] nunjucks macros for components
+- [ ] add images to blogposts
+- [ ] eleventy custom filters and access to NPM ecosystem (date)
+- [ ] eleventy pagination
+- [ ] dynamic data files (starships) and promise all
+-
