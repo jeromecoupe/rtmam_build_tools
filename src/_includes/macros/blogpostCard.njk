@@ -1,6 +1,12 @@
 {% macro blogpostCard(params) %}
 
+  {% set imgSmall = "/assets/img/blogposts/800x600/" ~ params.image %}
   <article>
+    <img src="{{ imgSmall }}"
+         class="o-fluidimg"
+         alt="{{ params.alt }}"
+         loading="lazy"
+         decoding="async">
     <h2>{{ params.title }}</h2>
     <p>{{ params.summary }}</p>
     <p><a href="{{ params.url }}">Read more</a></p>

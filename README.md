@@ -29,9 +29,9 @@ Let's play with
 - [ ] explain how to load homemade NPM scripts
 - [x] add `@11ty/eleventy`
 - [x] eleventy collections (tags and globs / folders)
-- [ ] nunjucks macros for components
-- [ ] add images to blogposts
+- [x] nunjucks macros for components
+- [x] add images to blogposts
 - [ ] eleventy custom filters and access to NPM ecosystem (date)
 - [ ] eleventy pagination
 - [ ] dynamic data files (starships) and promise all
--
+- [ ] generate images / thumbnails via Sharp

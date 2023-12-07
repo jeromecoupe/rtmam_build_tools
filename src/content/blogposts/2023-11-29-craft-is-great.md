@@ -1,6 +1,8 @@
 ---
 title: "Why I think Craft is a great CMS"
 summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa molestias excepturi voluptatem dicta harum cumque at magnam. Ex consectetur non perspiciatis! Suscipit debitis illum quo aliquam enim delectus rerum minus!"
+blogImage: "craftcms.jpg"
+blogImageAlt: "Craft CMS logo"
 ---
 
 ## This is a title
