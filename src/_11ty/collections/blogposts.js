@@ -1,8 +1,8 @@
 const blogposts = (collection) => {
-  let blogposts = collection
+  let posts = collection
     .getFilteredByGlob("./src/content/blogposts/*.md")
     .reverse();
-  return blogposts;
+  return posts;
 };
 
-module.exports = { blogposts };
+module.exports = blogposts;
